@@ -1,0 +1,5 @@
+#! /bin/sh
+
+cd /home/steav/Documents/P/NodeProject/senm/
+
+node ./getnewlist.js

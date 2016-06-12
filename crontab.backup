@@ -1,0 +1,7 @@
+#! /bin/sh
+SHELL=/bin/sh
+PATH=/home/steav/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+
+@daily downloadsorting.sh
+@reboot echo law74yer | sudo -S chmod -R 760 /mnt/Storage
+@reboot cd /home/steav/Downloads; python3 mv.py

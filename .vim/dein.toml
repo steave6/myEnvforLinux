@@ -1,0 +1,93 @@
+# http://qiita.com/okamos/items/2259d5c770d51b88d75b
+# 上記URLを参考に設定
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# vimprop 非同期処理
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+  [plugins.build]
+  windows = 'tools\\update-dll-mingw'
+  cygwin  = 'make -f make_cygwin.mak'
+  mac     = 'make -f make_mac.mak'
+  linux   = 'make'
+  unix    = 'gmake'
+
+# Unite関連 {{{
+[[plugins]]
+repo = 'Shougo/unite.vim'
+[[plugins]]
+repo = 'ujihisa/unite-colorscheme'
+# }}}
+
+[[plugins]] #ファイル等参照
+repo = 'scrooloose/nerdtree' 
+[[plugins]] #ステータスバーの改良
+repo = 'itchyny/lightline.vim'
+
+
+[[plugins]] # Coffeescript用syntax等
+repo = 'kchmck/vim-coffee-script'
+
+[[plugins]] # インデントの深さによって色分け
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo = 'guileen/vim-node-dict'
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+
+# [[plugins]]
+# repo = 'othree/yajs.vim'
+# on_ft = 'javascript'
+
+# 編集用プラグイン {{{
+[[plugins]] # multiple edditing for variables.
+repo = 'terryma/vim-multiple-cursors'
+[[plugins]] #閉じ括弧補完
+repo = 'kana/vim-smartinput'
+[[plugins]] #コメントアウト拡張
+repo = 'tomtom/tcomment_vim' 
+[[plugins]]
+repo = 'mattn/emmet-vim'
+# }}}
+
+# Sougo plugin {{{
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+[[plugins]]
+repo = 'Shougo/neosnippet'
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+[[plugins]] # 英単語補完
+repo = 'ujihisa/neco-look'
+#}}}
+
+# カラースキーム　プラグイン　{{{
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+[[plugins]]
+repo = 'jeffreyiacono/vim-colors-wombat'
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+[[plugins]]
+repo = 'jpo/vim-railscasts-theme'
+[[plugins]]
+repo =  'therubymug/vim-pyte'
+[[plugins]]
+repo =  'tomasr/molokai'
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+[[plugins]]
+repo = 'vim-scripts/twilight'
+[[plugins]]
+repo = 'jonathanfilip/vim-lucius'
+[[plugins]]
+repo = 'vim-scripts/Wombat'
+# }}}
