@@ -23,9 +23,10 @@ ubuntu_setup(){
 install_apt(){
   sudo apt-get update
   echo "install fundamental software"
-  sudo apt-get install byobu mplayer git curl
+  sudo apt-get install -y byobu mplayer git curl
+  sudo apt-get install -y redshift redshift-gtk
   # kvm install
-  sudo apt-get install kvm virt-manager libvirt-bin bridge-utils
+  sudo apt-get install -y kvm virt-manager libvirt-bin bridge-utils
   #docker install
   curl -fsSL https://get.docker.com/ | sh
   # nodejs v6.xx install
@@ -54,18 +55,21 @@ mvsettingfile(){
   # あとでtestを削除する
   ls
   echo "move fundamental file .* to home folder"
-  find ./home/ -type f -exec cp {} ~/test/ \;
+  find ./home/ -type f -exec cp {} ~/ \;
   echo "moving foler bin ..."
-    cp -r ./bin ~/test
+    cp -r ./bin ~/
   echo "move foler bin ends"
   echo "moving foler .fonts ..."
-    cp -r ./.fonts ~/test
+    cp -r ./.fonts ~/
   echo "move foler .fonts ends"
   echo "moving foler .vim ..."
-    cp -r ./.vim ~/test
+    cp -r ./.vim ~/
   echo "move foler .vim ends"
+  echo "moving foler for redshift ..."
+    cp -r ./.config ~/
+  echo "move foler .fonts ends"
   echo "move foler P ..."
-    cp -rf ./Documents ~/test/
+    cp -rf ./Documents ~/
   echo "move foler P ends"
 }
 
