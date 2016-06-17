@@ -23,7 +23,7 @@ ubuntu_setup(){
 install_apt(){
   sudo apt-get update
   echo "install fundamental software"
-  sudo apt-get install -y byobu mplayer git curl
+  sudo apt-get install -y byobu mplayer git curl vim
   sudo apt-get install -y redshift redshift-gtk
   # kvm install
   sudo apt-get install -y kvm virt-manager libvirt-bin bridge-utils
@@ -33,12 +33,6 @@ install_apt(){
   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   sudo apt-get install -y nodejs
   sudo apt-get install -y build-essential
-  # install pia manager
-  echo "install pia manager"
-  wget "https://jpn.privateinternetaccess.com/installer/download_installer_linux"
-  tar -xvf installer_linux.tar.gz
-  chmod +x installer_linux.sh
-  ./installer_linux.sh
 }
 
 envsetting(){
@@ -46,7 +40,7 @@ envsetting(){
   LANG=C xdg-user-dirs-gtk-update
   echo "folder name change to english"
   mvsettingfile
-  PATH=$PATH:/home/steav/bin
+  export PATH=$PATH:${HOME}/bin
   kvmsettings
 }
 
@@ -74,7 +68,7 @@ mvsettingfile(){
 }
 
 kvmsettings(){
-  echo vhost_net >> /etc/modules
+  sudo echo vhost_net >> /etc/modules
   sudo service libvirt-bin start
   sudo update-rc.d libvirt-bin defaults
 }
