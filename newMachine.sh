@@ -23,12 +23,8 @@ ubuntu_setup(){
 install_apt(){
   sudo apt-get update
   echo "install fundamental software"
-  sudo apt-get install -y byobu mplayer git curl vim
+  sudo apt-get install -y byobu mplayer curl vim xdotool xbindkeys aria2 midori vim-gnome
   sudo apt-get install -y redshift redshift-gtk
-  # kvm install
-  sudo apt-get install -y kvm virt-manager libvirt-bin bridge-utils
-  #docker install
-  curl -fsSL https://get.docker.com/ | sh
   # nodejs v6.xx install
   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   sudo apt-get install -y nodejs
@@ -65,12 +61,6 @@ mvsettingfile(){
   echo "move foler P ..."
     cp -rf ./Documents ~/
   echo "move foler P ends"
-}
-
-kvmsettings(){
-  sudo echo vhost_net >> /etc/modules
-  sudo service libvirt-bin start
-  sudo update-rc.d libvirt-bin defaults
 }
 
 
